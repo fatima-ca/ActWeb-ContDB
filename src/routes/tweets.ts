@@ -6,6 +6,7 @@ const router  = express.Router();
 const tweetHttpHandler = new TweetHttpHandler();
 
 router.get('/', tweetHttpHandler.getTweets);
+router.get('/numerospares', tweetHttpHandler.getPares);
 router.get('/:id', tweetHttpHandler.getTweetById);
 router.put('/:id', tweetHttpHandler.updateTweet);
 router.delete('/:id', tweetHttpHandler.deleteTweet);

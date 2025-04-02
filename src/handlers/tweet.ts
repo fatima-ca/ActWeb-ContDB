@@ -14,6 +14,15 @@ class TweetHttpHandler {
         }
     }
 
+    async getPares(request: Request, response: Response, next: NextFunction) {
+        try {
+            const numPares = await tweetController.Pares();
+            response.json(numPares)
+        } catch (error) {
+            next(error)
+        }
+    }
+
     async getTweetById(request: Request, response: Response, next: NextFunction) {
         
     }

@@ -8,6 +8,12 @@ class TweetController{
       return allTweets;
     }
 
+    async Pares() {
+        const allTweets = await tweetService.getAll();
+        const numPares = allTweets.filter((num: number) => num % 2 === 0);
+        return numPares;
+    }
+
   
 
 }
